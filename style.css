@@ -1,0 +1,194 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* GRADIENT BACKGROUND */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #ebedee 0%, #c88c8c 100%);
+    animation: gradientMove 10s infinite alternate;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientMove {
+    0% {
+        background: linear-gradient(135deg, #e6d097, #fdf1ce);
+    }
+    100% {
+        background: linear-gradient(135deg, #ffe9d6, #f9d3e1);
+    }
+}
+
+/* GLASSMORPHIC CONTAINER */
+.container {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    width: 50vh;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    animation: fadeIn 1s ease-out;
+}
+
+/* FADE-IN ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.amount input {
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    transition: 0.3s ease;
+}
+
+/* INPUT FOCUS ANIMATION */
+.amount input:focus {
+    border-color: #af4d98;
+    box-shadow: 0 0 8px rgba(175, 77, 152, 0.5);
+}
+
+.amount input::placeholder {
+    font-size: 12px;
+    color: #888;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.dropdowns i {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    color: #af4d98;
+    animation: swapIcon 1.5s infinite ease-in-out;
+}
+
+/* ICON BOUNCE ANIMATION */
+@keyframes swapIcon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background: #fff;
+
+    transition: 0.3s ease;
+}
+
+/* FLOATING ANIMATION FOR DROPDOWN BOXES */
+.select-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(175, 77, 152, 0.2);
+}
+
+.select-container img {
+    max-width: 2.2rem;
+}
+
+.select-container select {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.msg {
+    margin: 2rem 0;
+    font-weight: 600;
+    color: #444;
+}
+
+/* SUBMIT BUTTON */
+form button {
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(135deg, #d16ba5, #c777b9, #ba83ca);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+
+    transition: 0.3s ease-in-out;
+}
+
+/* BUTTON HOVER ANIMATION */
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(175, 77, 152, 0.4);
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+@keyframes colorChange {
+    0% { background: #d16ba5; }
+    25% { background: #c777b9; }
+    50% { background: #ba83ca; }
+    75% { background: #aa8fd8; }
+    100% { background: #d16ba5; }
+}
+
+
+
+form button {
+    width: 100%;
+    height: 3rem;
+    background: #d16ba5;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+
+    animation: colorChange 4s infinite alternate ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(175, 77, 152, 0.4);
+}
